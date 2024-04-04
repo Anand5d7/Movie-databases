@@ -4,7 +4,7 @@ import MovieCard from '../MovieCard'
 import NavBar from '../NavBar'
 import Pagination from '../Pagination'
 
-import SearchMovieContext from '../../context/SearchMovieContext'
+import SearchMoviesContext from '../../context/SearchMovieContext'
 
 import './index.css'
 
@@ -12,7 +12,7 @@ const SearchQuery = () => {
   const renderEmptyView = () => (
     <div className="empty-view-container">
       <h1>No results found.</h1>
-      <p>Do not get worried, Try to search again.</p>
+      <p>Don not get worried, Try to search again.</p>
     </div>
   )
 
@@ -51,7 +51,7 @@ const SearchQuery = () => {
   }
 
   return (
-    <SearchMovieContext.Consumer>
+    <SearchMoviesContext.Consumer>
       {value => {
         const {searchResponse, onTriggerSearchingQuery} = value
 
@@ -68,7 +68,7 @@ const SearchQuery = () => {
           </>
         )
       }}
-    </SearchMovieContext.Consumer>
+    </SearchMoviesContext.Consumer>
   )
 }
 

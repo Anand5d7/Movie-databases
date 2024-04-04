@@ -11,7 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.App-container {
+.App {
   min-height: 100vh;
 }
 

@@ -1,12 +1,12 @@
 import {Link, withRouter} from 'react-router-dom'
 
-import SearchMovieContext from '../../context/SearchMovieContext'
+import SearchMoviesContext from '../../context/SearchMovieContext'
 
 import './index.css'
 
 const NavBar = props => {
   const renderSearchBar = () => (
-    <SearchMovieContext.Consumer>
+    <SearchMoviesContext.Consumer>
       {value => {
         const {
           onTriggerSearchingQuery,
@@ -42,7 +42,7 @@ const NavBar = props => {
           </div>
         )
       }}
-    </SearchMovieContext.Consumer>
+    </SearchMoviesContext.Consumer>
   )
 
   return (

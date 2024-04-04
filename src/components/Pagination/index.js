@@ -44,15 +44,16 @@ class Pagination extends React.Component {
 
   render() {
     const {pageNo} = this.state
-    // const {totalPages} = this.props
+    // eslint-disable-next-line no-unused-vars
+    const {totalPages} = this.props
 
     return (
       <div className="mb-3 d-flex justify-content-center align-items-center">
-        <button className="control-btn" type="button" onClick={this.onPrevPage}>
+        <button type="button" className="control-btn" onClick={this.onPrevPage}>
           Prev
         </button>
         <p className="page-no">{pageNo}</p>
-        <button className="control-btn" type="button" onClick={this.onNextPage}>
+        <button type="button" className="control-btn" onClick={this.onNextPage}>
           Next
         </button>
       </div>

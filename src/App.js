@@ -6,12 +6,13 @@ import TopRated from './components/TopRated'
 import Upcoming from './components/Upcoming'
 import SearchQuery from './components/SearchQuery'
 
-import SearchMovieContext from './context/SearchMovieContext'
+import SearchMoviesContext from './context/SearchMovieContext'
 
 import './App.css'
 
 const API_KEY = 'f32b79895b21468afbdd6d5342cbf3da'
 
+// write your code here
 const App = () => {
   const [searchResponse, setSearchResponse] = useState({})
   const [apiStatus, setApiStatus] = useState('INITIAL')
@@ -30,10 +31,9 @@ const App = () => {
     })),
   })
 
-  // eslint-disable-next-line no-unused-vars
   const onTriggerSearchingQuery = async (page = 1) => {
     setApiStatus('IN_PROGRESS')
-    const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchInput}&page=1`
+    const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchInput}&page=${page}`
 
     const response = await fetch(apiUrl)
     const data = await response.json()
@@ -42,7 +42,7 @@ const App = () => {
   }
 
   return (
-    <SearchMovieContext.Provider
+    <SearchMoviesContext.Provider
       value={{
         searchResponse,
         apiStatus,
@@ -51,7 +51,7 @@ const App = () => {
         onChangeSearchInput,
       }}
     >
-      <div className="App-container d-flex flex-column">
+      <div className="App d-flex flex-column">
         <Switch>
           <Route exact path="/" component={Popular} />
           <Route exact path="/top-rated" component={TopRated} />
@@ -59,7 +59,7 @@ const App = () => {
           <Route exact path="/search" component={SearchQuery} />
         </Switch>
       </div>
-    </SearchMovieContext.Provider>
+    </SearchMoviesContext.Provider>
   )
 }
 

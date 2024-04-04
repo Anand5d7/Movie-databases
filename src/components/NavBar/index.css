@@ -9,14 +9,14 @@
 }
 
 .page-logo {
-  margin: 0px;
+  margin: 0;
   font-family: 'Roboto';
   font-weight: 600;
   font-size: 28px;
   color: #032541;
   letter-spacing: 1px;
   line-height: 38px;
-  padding: 0px 5px;
+  padding: 0 5px;
 }
 
 .nav-items-list {
@@ -31,8 +31,8 @@
   text-decoration: none;
   color: #fff !important;
   font-family: 'Roboto';
-  font-size: 16px;
   font-weight: 500;
+  font-size: 16px;
 }
 
 .search-input {

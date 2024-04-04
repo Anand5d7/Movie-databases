@@ -1,8 +1,8 @@
 import {createContext} from 'react'
 
-const SearchMovieContext = createContext({
+const SearchMoviesContext = createContext({
   searchResponse: {},
   onTriggerSearchingQuery: () => {},
 })
 
-export default SearchMovieContext
+export default SearchMoviesContext

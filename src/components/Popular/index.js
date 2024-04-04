@@ -30,7 +30,7 @@ class Popular extends React.Component {
 
   getPopularMoviesResponse = async (page = 1) => {
     const API_KEY = 'f32b79895b21468afbdd6d5342cbf3da'
-    const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&page=${page}`
+    const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`
     const response = await fetch(apiUrl)
     const data = await response.json()
     const newData = this.getUpdatedData(data)

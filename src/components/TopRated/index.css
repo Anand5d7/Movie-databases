@@ -7,7 +7,6 @@
   padding: 0px;
   margin-bottom: 0px;
 }
-
 @media screen and (max-width: 1200px) {
   .movie-list-container {
     display: flex;
@@ -23,23 +22,20 @@
   background-color: #2c2c2c;
   min-height: 80vh;
 }
-
 .route-heading {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
-  font-family: 'Roboto';
   color: #fff;
   font-weight: bold;
   margin: 0px;
 }
-
 @media screen and (max-width: 425px) {
   .route-heading {
     text-align: center;
   }
 }
-
 .popular-container {
-  padding: 2rem;
+  padding: 2em;
 }
 
 .loader-style {
@@ -50,14 +46,12 @@
   bottom: 50%;
   background-color: #2c2c2c;
 }
-
 .page-numbers {
-  font-family: 'Roboto';
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   color: #fff;
 }
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 425px) {
   .page-numbers {
     text-align: center;
   }
@@ -68,7 +62,6 @@
   color: #fff;
   margin-left: 20px;
 }
-
 .loader-container {
   height: 100vh;
 }
